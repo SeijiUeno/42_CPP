@@ -1,2 +1,2 @@
 # 42_CPP
-C++ 
+Basic C++ 
