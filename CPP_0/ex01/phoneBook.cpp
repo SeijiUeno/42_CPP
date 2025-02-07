@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
+/*   phoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sueno-te <sueno-te@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 17:26:18 by sueno-te          #+#    #+#             */
-/*   Updated: 2025/01/27 20:15:36 by sueno-te         ###   ########.fr       */
+/*   Updated: 2025/02/07 17:48:23 by sueno-te         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "PhoneBook.hpp"
+# include "phoneBook.hpp"
 # include <iostream>
 # include <iomanip>
 # include <limits>
 
-// static
 static bool validatePhoneNumber(std::string& phoneNumber)
 {
-	return (!phoneNumber.empty() && std::all_of(phoneNumber.begin(), phoneNumber.end(), ::isdigit));
+	if (!phoneNumber.empty())
+		return(false);
+	return(true);
 }
 
 std::string getValidPhoneNumber()
@@ -29,7 +30,7 @@ std::string getValidPhoneNumber()
 	{
 		std::cout << "Input the phone number (only digits allowed): ";
 		std::getline(std::cin, phoneNumber);
-		if (isValidPhoneNumber(phoneNumber)) {
+		if (validatePhoneNumber(phoneNumber)) {
 			break;
 		} else {
 			std::cout << "Invalid phone number. Please enter a valid phone number with only digits.\n";

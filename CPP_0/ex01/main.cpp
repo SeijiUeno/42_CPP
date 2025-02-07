@@ -6,13 +6,13 @@
 /*   By: sueno-te <sueno-te@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 18:28:02 by sueno-te          #+#    #+#             */
-/*   Updated: 2025/01/27 19:10:06 by sueno-te         ###   ########.fr       */
+/*   Updated: 2025/02/07 16:16:51 by sueno-te         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <csignal>
 #include <iostream>
-#include "PhoneBook.hpp"
+#include "phoneBook.hpp"
 
 void	handleSignal(int signal) {
 	(void)signal;

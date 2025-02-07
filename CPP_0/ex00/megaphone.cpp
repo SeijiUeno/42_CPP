@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   megaphone.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sueno-te <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sueno-te <sueno-te@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 21:04:35 by sueno-te          #+#    #+#             */
-/*   Updated: 2025/01/14 21:44:52 by sueno-te         ###   ########.fr       */
+/*   Updated: 2025/02/07 17:40:57 by sueno-te         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include <iostream>
 # include <cctype>
 
-void	print_input_uppercase(char *input);
+void	print_input_uppercase(char *input, bool first);
 
 int	main(int argc, char **argv)
 {
@@ -26,23 +26,18 @@ int	main(int argc, char **argv)
 	else
 	{
 		while (++i < argc)
-			print_input_uppercase(argv[i]);
+			print_input_uppercase(argv[i], i);
 		std::cout << std::endl;
 	}
 	return (0);
 }
 
-void    print_input_uppercase(char *input)
+void    print_input_uppercase(char *input, bool first)
 {
-	int		i = -1;
-	static bool	isFirstString = 1;
-
 	if (input == NULL)
 		return ;
-	if (!isFirstString)
+	if (!first == 1)
 		std::cout << " ";
-	else
-		isFirstString = 0;
-	while (input[++i] != '\0')
+	for (int i = 0; input[i] != '\0'; i++)
 		std::cout << (char)toupper(input[i]);
 }
