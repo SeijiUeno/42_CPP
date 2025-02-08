@@ -1,20 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   randomChump.cpp                                    :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sueno-te <sueno-te@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/08 15:17:33 by sueno-te          #+#    #+#             */
-/*   Updated: 2025/02/08 19:18:19 by sueno-te         ###   ########.fr       */
+/*   Created: 2025/02/08 19:18:43 by sueno-te          #+#    #+#             */
+/*   Updated: 2025/02/08 19:29:17 by sueno-te         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+# include "Zombie.hpp"
 
-void	randomChump(std::string name)
+Zombie::Zombie() : _name("foo") {}
+
+Zombie::Zombie(std::string name) : _name(name) {}
+
+Zombie::~Zombie()
 {
-	Zombie	zombie(name);
-	zombie.announce();
-	return ;
+	std::cout << _name << " is destroyed" << std::endl;
 }
+
+void	Zombie::setName(std::string name)
+{
+	this->_name = name;
+}
+
+void	Zombie::announce()
+{
+	std::cout << this->_name;
+	std::cout << ": BraiiiiiiinnnzzzZ..." << std::endl;
+}
+

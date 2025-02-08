@@ -1,20 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   randomChump.cpp                                    :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sueno-te <sueno-te@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/08 15:17:33 by sueno-te          #+#    #+#             */
-/*   Updated: 2025/02/08 19:18:19 by sueno-te         ###   ########.fr       */
+/*   Created: 2025/02/08 19:18:47 by sueno-te          #+#    #+#             */
+/*   Updated: 2025/02/08 19:32:55 by sueno-te         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef ZOMBIE_HPP
+# define ZOMBIE_HPP
 
-void	randomChump(std::string name)
+# include <iostream>
+# include <string>
+
+class Zombie 
 {
-	Zombie	zombie(name);
-	zombie.announce();
-	return ;
-}
+	private:
+		std::string _name;
+	
+	public:
+		Zombie();
+		Zombie(std::string name);
+		~Zombie(void);
+		
+		void	setName(std::string name);
+		void 	announce(void);
+};
+
+#endif
