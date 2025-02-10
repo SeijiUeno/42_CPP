@@ -6,33 +6,28 @@
 /*   By: sueno-te <sueno-te@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 20:28:02 by sueno-te          #+#    #+#             */
-/*   Updated: 2025/02/10 08:47:57 by sueno-te         ###   ########.fr       */
+/*   Updated: 2025/02/10 09:52:16 by sueno-te         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef HUMANB_HPP
 # define HUMANB_HPP
 
-# include <iostream>
-# include <string>
+# include "Weapon.hpp"
 
 class HumanB
 {
 	private:
-		std::string* _weapon;
 		std::string _name;
+		Weapon* _weapon;
 		
 	public:
+		HumanB();
 		HumanB(std::string name);
-		HumanB(std::string name, std::string weapon);
+		HumanB(std::string name, Weapon& weapon);
 		~HumanB();
 
-		void	setWeapon(std::string& weapon);
-		void	setName(std::string name);
-		
-		std::string&	getWeapon(void) const;
-		std::string&	getName(void) const;
-
+		void 	setWeapon(Weapon& weapon);
 		void	attack(void) const;
 };
 
