@@ -1,33 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   NotASed.hpp                                        :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sueno-te <sueno-te@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/09 10:17:02 by sueno-te          #+#    #+#             */
-/*   Updated: 2025/02/10 12:54:56 by sueno-te         ###   ########.fr       */
+/*   Created: 2025/02/09 10:17:36 by sueno-te          #+#    #+#             */
+/*   Updated: 2025/02/10 16:25:28 by sueno-te         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SED_HPP
-# define SED_HPP
+#include "Harl.hpp"
 
-# include <iostream>
-# include <fstream>
-
-class NotASed
+int main(int argc, char **argv)
 {
-	private:
-	std::fstream  _input;
-	std::fstream _output;
-	
-	void			_replacing( const std::string& s1, const std::string& s2);
-	
-	public:
-	NotASed( const std::string& input_file, const std::string& s1, const std::string& s2);
-	~NotASed( void );
-};
+	Harl harl;
 
-
-#endif
+	if (argc != 2)
+	{
+		std::cerr	<< "Usage: ./harlFilter <warning_level>\n"
+					<< "Warnings: <INFO>, <DEBUG>, <WARNING>, <ERRROR>" << std::endl;
+		return (1);
+	}
+	harl.complain(argv[1]);
+	return (0);
+}

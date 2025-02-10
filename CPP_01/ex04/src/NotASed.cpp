@@ -6,7 +6,7 @@
 /*   By: sueno-te <sueno-te@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/09 10:16:59 by sueno-te          #+#    #+#             */
-/*   Updated: 2025/02/10 12:07:11 by sueno-te         ###   ########.fr       */
+/*   Updated: 2025/02/10 13:34:18 by sueno-te         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,23 +20,24 @@ static std::string replaceSubstring(std::string str, const std::string& target, 
 	
 	if (target.empty())
 		return (str);
-	
+
 	pos = 0;
 	prevPos = 0;
 	while ((pos = str.find(target, pos)) != std::string::npos)
 	{
-		result += str.substr(prevPos, pos - prevPos);
+		result += str.substr(0, pos);
 		result += replacement;
-		prevPos = pos + target.length(); 
+		pos += target.length(); 
+		str = str.substr(pos);
 	}
-	result += str.substr(prevPos);
+	result += str;
 	return (result);
 }
 	
-NotASeed::NotASeed( const std::string& input_file, const std::string& s1, const std::string& s2)
+NotASed::NotASed( const std::string& input_file, const std::string& s1, const std::string& s2)
 {
 	std::string out_name;
-	
+
 	_input.open(input_file.c_str(), std::fstream::in);
 	if (_input.fail())
 	{
@@ -54,15 +55,15 @@ NotASeed::NotASeed( const std::string& input_file, const std::string& s1, const 
 		return ;
 	}
 	_replacing(s1, s2);
-}
-
-NotASeed::~NotASeed( void )
-{
-	_input.close();
 	_output.close();
+	_input.close();
 }
 
-void	NotASeed::_replacing( const std::string& s1, const std::string& s2 )
+NotASed::~NotASed( void )
+{
+}
+
+void	NotASed::_replacing( const std::string& s1, const std::string& s2 )
 {
 	std::string	line;
 	std::string new_line;
