@@ -6,7 +6,7 @@
 /*   By: sueno-te <sueno-te@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/13 14:53:36 by sueno-te          #+#    #+#             */
-/*   Updated: 2025/02/14 15:18:30 by sueno-te         ###   ########.fr       */
+/*   Updated: 2025/02/14 16:21:10 by sueno-te         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Dog::Dog(void): Animal("Dog"), _brain(new Brain())
 {
     std::cout << "Dog : constructor!" << std::endl;
     for (int i = 0;  i < 100; i++)
-         _brain->setIdea(i, "I want meat!");
+         _brain->setIdea(i, "I love meat! and Treats!");
 }
 
 Dog::~Dog(void)
@@ -28,13 +28,13 @@ Dog::~Dog(void)
 
 Dog::Dog(const Dog &source): Animal(source)
 {
-    std::cout << "Dog : Copy constructor called." << std::endl;
+    std::cout << "Dog : Copy constructor." << std::endl;
     _brain = new Brain(*source._brain);
 }
 
 Dog &Dog::operator=(const Dog &source)
 {
-    std::cout << "Dog: assignment operator called." << std::endl;
+    std::cout << "Dog: assignment operator." << std::endl;
     if (this != &source)
     {
         type = source.type;
@@ -45,7 +45,7 @@ Dog &Dog::operator=(const Dog &source)
 
 void Dog::makeSound() const
 {
-    std::cout <<"Dog Makesound: Woof!" << std::endl;
+    std::cout <<"Dog Makesound: Wooof!!" << std::endl;
 }
 
 void Dog::printIdeas() const

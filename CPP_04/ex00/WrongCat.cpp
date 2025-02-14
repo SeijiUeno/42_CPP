@@ -6,7 +6,7 @@
 /*   By: sueno-te <sueno-te@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/13 14:53:51 by sueno-te          #+#    #+#             */
-/*   Updated: 2025/02/14 13:23:20 by sueno-te         ###   ########.fr       */
+/*   Updated: 2025/02/14 16:18:52 by sueno-te         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,22 +15,22 @@
 WrongCat::WrongCat() : WrongAnimal()
 {
     type = "WrongCat";
-    std::cout << "WrongCat constructor called" << std::endl;
+    std::cout << "WrongCat constructor" << std::endl;
 }
 
 WrongCat::WrongCat(const WrongCat& source) : WrongAnimal(source)
 {
-    std::cout << "WrongCat copy constructor called" << std::endl;
+    std::cout << "WrongCat copy constructor" << std::endl;
 }
 
 WrongCat::~WrongCat()
 {
-    std::cout << "WrongCat destructor called" << std::endl;
+    std::cout << "WrongCat destructor" << std::endl;
 }
 
 WrongCat& WrongCat::operator=(const WrongCat& source)
 {
-    std::cout << "WrongCat assignment operator called" << std::endl;
+    std::cout << "WrongCat assignment operator" << std::endl;
     if (this != &source)
         type = source.type;
     return (*this);
@@ -38,5 +38,5 @@ WrongCat& WrongCat::operator=(const WrongCat& source)
 
 void WrongCat::makeSound() const
 {
-    std::cout << "cat sound: Meow!" << std::endl;
+    std::cout << "cat sound: Meoow!!" << std::endl;
 }

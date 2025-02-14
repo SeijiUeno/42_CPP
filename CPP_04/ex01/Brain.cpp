@@ -6,7 +6,7 @@
 /*   By: sueno-te <sueno-te@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/13 14:53:44 by sueno-te          #+#    #+#             */
-/*   Updated: 2025/02/14 15:18:30 by sueno-te         ###   ########.fr       */
+/*   Updated: 2025/02/14 16:19:47 by sueno-te         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,5 +70,5 @@ void Brain::showIdeas() const
 
 Brain::~Brain(void)
 {
-    std::cout << "Brain: destructor!" << std::endl;
+    std::cout << "Brain: destructor!!" << std::endl;
 }
