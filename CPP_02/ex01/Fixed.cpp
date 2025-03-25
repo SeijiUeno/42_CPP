@@ -6,7 +6,7 @@
 /*   By: sueno-te <sueno-te@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 17:10:05 by sueno-te          #+#    #+#             */
-/*   Updated: 2025/02/12 10:26:06 by sueno-te         ###   ########.fr       */
+/*   Updated: 2025/02/12 10:36:35 by sueno-te         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void	Fixed::setRawBits( int const raw )
 // overload
 std::ostream&	operator<<( std::ostream & _cout, Fixed const & fixed)
 {
-	_cout << fixed._fixed;
+	_cout << fixed.toFloat();
 	return (_cout);
 }
 

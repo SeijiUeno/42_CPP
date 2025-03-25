@@ -99,12 +99,12 @@ void testIncrementDecrementOperators()
     assert(a.toInt() == 2);
 
     Fixed temp = a++;
-    std::cout << "postfix increment: " << a.toInt() << " (returned: " << temp.toInt() << ")" << std::endl;
+    std::cout << "postfix increment: " << a.toInt() << " ((before)temp: " << temp.toInt() << ")" << std::endl;
     assert(a.toInt() == 3);
     assert(temp.toInt() == 2);
 
     temp = a--;
-    std::cout << "postfix decrement: " << a.toInt() << " (returned: " << temp.toInt() << ")" << std::endl;
+    std::cout << "postfix decrement: " << a.toInt() << " ((before)temp: " << temp.toInt() << ")" << std::endl;
     assert(a.toInt() == 2);
     assert(temp.toInt() == 3);
 

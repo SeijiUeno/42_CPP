@@ -6,7 +6,7 @@
 /*   By: sueno-te <sueno-te@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 17:10:02 by sueno-te          #+#    #+#             */
-/*   Updated: 2025/02/11 11:29:29 by sueno-te         ###   ########.fr       */
+/*   Updated: 2025/02/12 10:34:58 by sueno-te         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,9 @@ public:
 	void	setRawBits( int const raw );
 	
 	int		toInt( void ) const;
-	float	toFloat( void ) const;
-
-	friend std::ostream&	operator<<( std::ostream & _cout, Fixed const & fixed);	
+	float	toFloat( void ) const;	
 };
+
+std::ostream&	operator<<( std::ostream & _cout, Fixed const & fixed);
 
 #endif

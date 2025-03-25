@@ -6,7 +6,7 @@
 /*   By: sueno-te <sueno-te@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 17:10:02 by sueno-te          #+#    #+#             */
-/*   Updated: 2025/02/11 12:35:07 by sueno-te         ###   ########.fr       */
+/*   Updated: 2025/02/12 10:35:15 by sueno-te         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,8 +58,8 @@ public:
     static const Fixed &min(const Fixed &a, const Fixed &b);
     static Fixed &max(Fixed &a, Fixed &b);
     static const Fixed &max(const Fixed &a, const Fixed &b);
-
-    friend std::ostream &operator<<(std::ostream &_cout, Fixed const &fixed);
 };
+
+std::ostream &operator<<(std::ostream &_cout, Fixed const &fixed);
 
 #endif
